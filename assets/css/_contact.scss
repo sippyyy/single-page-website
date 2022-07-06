@@ -1,0 +1,71 @@
+@import 'mixins';
+@import 'variables';
+
+.contact{
+    @include paddingSection;
+    background-color: $second-bgr;
+
+    &__row{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: $space-48;
+    }
+
+    &__blocks{
+        padding-top: $space-30;
+        @include display(flex,center);
+        align-items: center
+    }
+
+    &__title{
+        @include title;
+        overflow: hidden;
+        margin-bottom: $space-8;
+    }
+
+    &__wrapper{
+        background-color: $white;
+        padding: $space-30 $space-16;
+        text-align: center;
+    }
+
+    &__icon{
+        font-size: 20px;
+        color: $title-color;
+        margin-bottom: $space-16;
+    }
+
+    &__tag{
+        @include title;
+        color: $primary;
+        margin-bottom: $space-30;
+        letter-spacing: unset;
+    }
+
+    &__links{
+        margin-top: $space-48;
+        padding-top: $space-30;
+        justify-content: center;
+        text-align: center;
+    }
+
+    &__link-container{
+        @include display(flex,center);
+    }
+
+    &__link{
+        @include display(flex,center);
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background-color: $title-color;
+        border-radius: 100%;
+        color: $white;
+
+        &+ .contact__link{
+            margin-left: $space-8;
+        }
+
+    }
+}

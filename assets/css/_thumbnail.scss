@@ -1,0 +1,46 @@
+.thumbnail{
+    background-image: url('../imgs/slider.jpg');
+    height: 700px;
+    background-position: bottom right;
+    background-size: cover;
+    background-repeat:no-repeat ;
+    @include display(flex,center);
+    align-items: center;
+
+    &__row{
+        @include display(flex,center);
+        align-items: center;
+        text-align: center;
+        flex-direction: column
+    }
+    &__content{
+        margin-bottom: $space-30;
+    }
+
+    &__titles{
+        @include display(flex,center);
+        @include bigTitle;
+        margin-bottom: $space-8;
+    }
+
+    &__title{
+
+        &-opacity{
+            color: $text-color;
+        }
+    }
+
+    &__btn{
+        margin-top: $space-48;
+        background-color: $primary;
+        @include button;
+        border-radius: 8px;
+        border-bottom: 5px solid $dark-primary;
+
+        &_container{
+            width: 100%;
+            @include display(flex,center);
+        }
+
+    }
+}

@@ -1,0 +1,71 @@
+@import 'mixins';
+@import 'variables';
+
+.subcribe{
+    background-image: url('../imgs/footer.jpg');
+    @include paddingSection;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    min-height:100px;
+
+    &.close{ 
+       & .subcribe__form{
+            display: none;
+        } 
+
+        & .subcribe__close{
+            transform: rotate(180deg);
+        }
+    }
+
+    &__icon{
+        font-size: 25px;
+        margin-bottom: $space-16;
+        color: $white;
+    }
+
+    &__row{
+        justify-content: center;
+        text-align:center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__topic{
+        @include title;
+        color: $white;
+        margin-bottom: $space-48;
+    }
+
+    &__form{
+        @include display(flex,center);
+        outline: none;
+        
+    }
+
+    &__input{
+        @include display(flex,unset);
+        padding: $space-16 $space-16;
+        border: 1px solid rgba(255,255,255,0.4);
+        background-color: transparent;
+        flex: 1;
+        margin-right: $space-8;
+        color: $white;
+    }
+
+    &__btn{
+        background-color: $primary;
+        @include button($space-16);
+    }
+
+    &__button{
+        @include display(flex,center)
+    }
+
+    &__close{
+        @include bodyBtn(-5%);
+        @include transition;
+
+    }
+}

@@ -1,0 +1,26 @@
+@import 'mixins';
+@import 'variables';
+
+.portfolio{
+    background-color: $second-bgr;
+    @include paddingSection;
+
+    &__row{
+        @include display(flex,center);
+        text-align: center;
+        flex-direction: column;
+        align-items: center
+    }
+
+    &__title{
+        @include title;
+        margin-bottom: $space-16;
+    }
+
+    &__content{
+        margin-top: $space-48;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+}

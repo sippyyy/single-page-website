@@ -1,0 +1,97 @@
+@import 'variables';
+
+@mixin transition ($delay: 0s){
+    transition: all linear 0.4s $delay;
+}
+
+@mixin bigTitle ($color: $title-color) {
+    font-size: 53.33333333333333px;
+    color: $color;
+    letter-spacing: 20px;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+    @include transition;
+    
+
+    @media (max-width: 860px) {
+        font-size: 40px;
+        letter-spacing: 10px;
+    }
+}
+
+@mixin problemSize {
+    font-size: 33.333333px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 300;
+}
+
+@mixin title {
+    font-size: 17px;
+    letter-spacing: 3.5px;
+    color: $title-color;
+    text-transform: uppercase;
+    font-weight: 600;
+    @include transition;
+
+    @media (max-width: 600px) {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+}
+
+@mixin textSize{
+    font-size: 13.2px;
+    color: $text-color;
+}
+
+@mixin paddingSection {
+    padding: 106px 0;
+}
+
+@mixin button($vertical : 24px){
+    padding: $vertical 37px;
+    @include title;
+    color: $white;
+}
+
+@mixin display ($type:unset, $justi: unset){
+    display: $type;
+    justify-content: $justi;
+}
+
+@mixin afterTitle ($width: 25%){
+    position: relative;
+    &::after{
+        content:'';
+        position: absolute;
+        width: $width;
+        height: 3px;
+        background-color: $primary;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@mixin bodyBtn ($bottom: 30px) {
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: $primary;
+    color: $white;
+    @include display(flex,center);
+    align-items: center;
+    border-radius: 100%;
+    @include transition;
+    bottom: $bottom;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.7;
+        
+    &:hover{
+        opacity: 1;
+    }
+}
+

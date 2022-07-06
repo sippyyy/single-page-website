@@ -1,0 +1,58 @@
+@import 'mixins';
+@import 'variables';
+
+.problems{
+    background-image: url('../imgs/bgr-2.jpg');
+    @include paddingSection;
+    background-position: center;
+    background-size: cover;
+    color: $white;
+    position: relative;
+    min-height: 100px;;
+
+    &.open{
+        height: 600px;
+        @include transition;
+
+
+        & .problems__more{
+            transform: rotate(180deg)
+        }
+    }
+
+
+    &__title{
+        @include bigTitle;
+        text-align: center;
+        color: $white;
+
+        @media (max-width: 488px) {
+            font-size: 17px;
+        }
+    }
+
+    &__desc{
+        @include display(flex,center);
+        align-items: center;
+        @include problemSize;
+        margin-top: $space-30;
+        @media (max-width: 488px) {
+            font-size: 17px;
+        }
+
+    }
+
+    &__italic{
+        font-style: italic;
+        padding: 0 5px;
+        font-weight: 500;
+    }
+
+    &__btn{
+        @include display(flex,center)
+    }
+
+    &__more{
+        @include bodyBtn
+    }
+}

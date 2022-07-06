@@ -1,0 +1,70 @@
+@import 'mixins';
+@import 'variables';
+
+.services{
+    @include paddingSection;
+
+    &__row{
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-bottom: $space-48;
+    }
+
+    &__title{
+        @include title;
+        margin-bottom: $space-16;
+    }
+
+    &__blocks{
+        @include display(flex,center);
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__block{
+        @include display(flex,center);
+        flex-direction: column;
+        align-items: center;
+        &-row{
+            margin-top: $space-48;
+
+        }
+    }
+
+    &__icon{
+        font-size: $service-icon;
+        z-index: 100;
+        color: $white;
+        &-container{
+            background-color: $primary;
+            width: 154px;
+            height: 154px;
+            border-radius: 100%;
+            @include display(flex,center);
+            align-items: center;
+            margin-bottom: $space-30;
+            overflow: hidden;
+
+        }
+    }
+
+    &__topic{
+        text-align: center;
+
+    }
+
+    &__service{
+        @include title;
+        letter-spacing: unset;
+        padding-bottom: $space-30;
+        margin-bottom: $space-16;
+        @include afterTitle
+    }
+    &__content{
+        text-align: center;
+    }
+
+
+}
