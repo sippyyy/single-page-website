@@ -10,7 +10,8 @@
     z-index: 1000;
 
     &__row{
-       @include display (flex,flex-end) 
+       @include display (flex,flex-end) ;
+       overflow:hidden;
     }
 
     &__nav{
@@ -20,13 +21,10 @@
         height: 100%;
         padding: 0 $space-8;
         border-radius: 8px;
-        display: inline;
         cursor: pointer;
 
         &.filled{
-            background-color: #372c3c;
-            color: $white;
-
+            color:$primary;
             @include transition
         }
     }

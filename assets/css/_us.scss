@@ -39,7 +39,10 @@
     }
 
     &__icon{
-        font-size: 40px;
+        i{
+            font-size: 40px;
+            color: $white;
+        }
     }
 
     &__content{

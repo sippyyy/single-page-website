@@ -113,6 +113,7 @@ button {
 .header__row {
   display: flex;
   justify-content: flex-end;
+  overflow: hidden;
 }
 .header__nav {
   display: flex;
@@ -122,12 +123,10 @@ button {
   height: 100%;
   padding: 0 8px;
   border-radius: 8px;
-  display: inline;
   cursor: pointer;
 }
 .header__nav.filled {
-  background-color: #372c3c;
-  color: #fff;
+  color: #3dc9b3;
   transition: all linear 0.4s 0s;
 }
 
@@ -507,8 +506,9 @@ button {
   transform: translateY(-100%);
   transition: all linear 0.4s 0s;
 }
-.us__icon {
+.us__icon i {
   font-size: 40px;
+  color: #fff;
 }
 .us__content {
   padding: 30px 0;
